@@ -14,8 +14,8 @@ The platform's electronics and firmware support **6 actuator channels**:
 the 5 arm joints (5-DOF) plus a gripper (Motor 6).
 
 The manuscript **"Open-Architecture Dual-MCU Control and Power Platform for
-a Legacy 5-DOF Educational Manipulator: Design and Experimental
-Characterization"** (IEEE Sensors Journal submission) reports
+a Legacy 5-DOF Manipulator: Design and Experimental
+Characterization"** reports
 characterization of the **5 arm joints only (Motors 1–5)**. Motor 6
 (gripper) is implemented and operational in this firmware but is **outside
 the scope** of the experiments reported in that manuscript (E1, E2, E3).
@@ -52,7 +52,7 @@ with per-motor duty cycle is in separate, ongoing development and is
 ## Reproducibility note
 
 This repository is tagged `v1.0-power-app-platform-paper` as the exact
-snapshot used to generate the results reported in the IEEE Sensors Journal
+snapshot used to generate the results reported in the 
 submission above. This tag will not be modified or deleted after
 submission. Any future fix will be published under a separate tag (e.g.
 `v1.0.1-power-app-platform-paper-revised`).
