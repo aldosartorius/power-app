@@ -52,7 +52,7 @@ with per-motor duty cycle is in separate, ongoing development and is
 ## Reproducibility note
 
 This repository is tagged `v1.0-power-app-platform-paper` as the exact
-snapshot used to generate the results reported in the 
-submission above. This tag will not be modified or deleted after
+snapshot used to generate the results reported in the manuscript
+referenced above. This tag will not be modified or deleted after
 submission. Any future fix will be published under a separate tag (e.g.
 `v1.0.1-power-app-platform-paper-revised`).
