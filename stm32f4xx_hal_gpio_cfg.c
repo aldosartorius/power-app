@@ -38,7 +38,9 @@ GPIO_Pin_TypeDef sPWM_Motor6_IN2_PB15 ={0};       //H bridge EN2 signal motor 6 
 
 //UART Comunication
 GPIO_Pin_TypeDef sUART_Tx_PB6 = {0};              //Tx pin for UART1 communication
-GPIO_Pin_TypeDef sUART_Rx_PB7 = {0};              //Rx pin for UART1 comunication
+GPIO_Pin_TypeDef sUART_Rx_PB7 = {0};              //Rx pin for UART1 comunication (hand held)
+GPIO_Pin_TypeDef sUART2_Tx_PA2 = {0};             //Tx pin for UART2 communication (PC)
+GPIO_Pin_TypeDef sUART2_Rx_PA3 = {0};             //Rx pin for UART2 communication (PC)
 
 
 void GPIO_Init(void){  
@@ -256,10 +258,26 @@ void GPIO_Init(void){
         //Port B, Pin 7 as alternate function 7
         sUART_Rx_PB7.Port = GPIO_PORT_B;
         sUART_Rx_PB7.Pin = GPIO_PIN_7;
-				sUART_Rx_PB7.Mode = GPIO_MODE_INPUT;
         sUART_Rx_PB7.Mode = GPIO_MODE_AF_PP;
         sUART_Rx_PB7.Alternate = AF7;
-        //Initialize Port B pin 6 using HAL function
+        //Initialize Port B pin 7 using HAL function
         HAL_GPIO_Pin_Init(&sUART_Rx_PB7); 
+
+				//UART2 Tx (PC link, ST-Link virtual COM on Nucleo)
+        //Port A, Pin 2 as alternate function 7
+        sUART2_Tx_PA2.Port = GPIO_PORT_A;
+        sUART2_Tx_PA2.Pin = GPIO_PIN_2;
+        sUART2_Tx_PA2.Mode = GPIO_MODE_AF_PP;
+				sUART2_Tx_PA2.OutputType = GPIO_OUTPUT_PUSHPULL;
+        sUART2_Tx_PA2.Alternate = AF7;
+        HAL_GPIO_Pin_Init(&sUART2_Tx_PA2); 
+
+				//UART2 Rx (PC link)
+        //Port A, Pin 3 as alternate function 7
+        sUART2_Rx_PA3.Port = GPIO_PORT_A;
+        sUART2_Rx_PA3.Pin = GPIO_PIN_3;
+        sUART2_Rx_PA3.Mode = GPIO_MODE_AF_PP;
+        sUART2_Rx_PA3.Alternate = AF7;
+        HAL_GPIO_Pin_Init(&sUART2_Rx_PA3); 
 				
 }

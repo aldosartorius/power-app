@@ -385,29 +385,9 @@
           <GroupName>app</GroupName>
           <Files>
             <File>
-              <FileName>main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\main.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32f4xx_hal_gpio.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\HAL_STM32F401\HAL_GPIO\stm32f4xx_hal_gpio.h</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_gpio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HAL_STM32F401\HAL_GPIO\stm32f4xx_hal_gpio.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_gpio_cfg.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\stm32f4xx_hal_gpio_cfg.h</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_gpio_cfg.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32f4xx_hal_gpio_cfg.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_hal_tim.h</FileName>
@@ -420,16 +400,6 @@
               <FilePath>..\HAL_STM32F401\HAL_TIM\stm32f4xx_hal_tim.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_hal_tim_cfg.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\stm32f4xx_hal_tim_cfg.h</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_tim_cfg.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32f4xx_hal_tim_cfg.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32f4xx_hal_uart.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\HAL_STM32F401\HAL_UART\stm32f4xx_hal_uart.h</FilePath>
@@ -440,9 +410,74 @@
               <FilePath>..\HAL_STM32F401\HAL_UART\stm32f4xx_hal_uart.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_hal_uart_cfg.h</FileName>
+              <FileName>app_config.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\stm32f4xx_hal_uart_cfg.h</FilePath>
+              <FilePath>.\app_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>crc8.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\crc8.h</FilePath>
+            </File>
+            <File>
+              <FileName>pc_frame.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\pc_frame.h</FilePath>
+            </File>
+            <File>
+              <FileName>ringbuf.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\ringbuf.h</FilePath>
+            </File>
+            <File>
+              <FileName>system.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\system.h</FilePath>
+            </File>
+            <File>
+              <FileName>arbiter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\arbiter.c</FilePath>
+            </File>
+            <File>
+              <FileName>crc8.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\crc8.c</FilePath>
+            </File>
+            <File>
+              <FileName>motor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\motor.c</FilePath>
+            </File>
+            <File>
+              <FileName>pc_frame.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\pc_frame.c</FilePath>
+            </File>
+            <File>
+              <FileName>system.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\system.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HAL_STM32F401\HAL_GPIO\stm32f4xx_hal_gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_gpio_cfg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\stm32f4xx_hal_gpio_cfg.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_tim_cfg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\stm32f4xx_hal_tim_cfg.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_hal_uart_cfg.c</FileName>
@@ -450,14 +485,34 @@
               <FilePath>.\stm32f4xx_hal_uart_cfg.c</FilePath>
             </File>
             <File>
-              <FileName>main_cfg.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\main_cfg.c</FilePath>
+              <FileName>stm32f4xx_hal_gpio_cfg.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\stm32f4xx_hal_gpio_cfg.h</FilePath>
             </File>
             <File>
-              <FileName>main_cfg.h</FileName>
+              <FileName>stm32f4xx_hal_tim_cfg.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\main_cfg.h</FilePath>
+              <FilePath>.\stm32f4xx_hal_tim_cfg.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_uart_cfg.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\stm32f4xx_hal_uart_cfg.h</FilePath>
+            </File>
+            <File>
+              <FileName>arbiter.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\arbiter.h</FilePath>
+            </File>
+            <File>
+              <FileName>motor.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\motor.h</FilePath>
+            </File>
+            <File>
+              <FileName>ringbuf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ringbuf.c</FilePath>
             </File>
           </Files>
         </Group>

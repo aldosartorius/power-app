@@ -6,4 +6,5 @@
   stm32f4xx_hal_gpio_cfg.h \
   ..\HAL_STM32F401\HAL_GPIO\stm32f4xx_hal_gpio.h stm32f4xx_hal_tim_cfg.h \
   ..\HAL_STM32F401\HAL_TIM\stm32f4xx_hal_tim.h stm32f4xx_hal_uart_cfg.h \
-  ..\HAL_STM32F401\HAL_UART\stm32f4xx_hal_uart.h main_cfg.h
+  ..\HAL_STM32F401\HAL_UART\stm32f4xx_hal_uart.h system.h ringbuf.h \
+  pc_frame.h app_config.h arbiter.h motor.h

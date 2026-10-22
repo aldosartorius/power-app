@@ -41,6 +41,8 @@ extern GPIO_Pin_TypeDef sPWM_Motor6_IN2_PB15;       //H bridge EN2 signal motor 
 
 //UART Comunication
 extern GPIO_Pin_TypeDef sUART_Tx_PB6;               //Tx pin for UART1 communication
-extern GPIO_Pin_TypeDef sUART_Rx_PB7;               //Rx pin for UART1 comunication
+extern GPIO_Pin_TypeDef sUART_Rx_PB7;               //Rx pin for UART1 comunication (hand held)
+extern GPIO_Pin_TypeDef sUART2_Tx_PA2;              //Tx pin for UART2 communication (PC)
+extern GPIO_Pin_TypeDef sUART2_Rx_PA3;              //Rx pin for UART2 communication (PC)
 
 #endif
