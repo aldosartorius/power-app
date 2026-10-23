@@ -18,7 +18,9 @@ static const MotorHw_t kMotor[MOTOR_COUNT] = {
     { &sPWM_Motor6_IN1_PB10, &sPWM_Motor6_IN2_PB15, &sTIMER4, &sOC_TIMER4_CHANNEL_4_PWM_Motor6 }
 };
 
-static short s_applied[MOTOR_COUNT];
+static const signed char kDirSign[MOTOR_COUNT] = MOTOR_DIR_SIGN_INIT;
+
+static short s_applied[MOTOR_COUNT];   /* PHYSICAL commands (after kDirSign) */
 
 static void write_motor(unsigned int i, short cmd)
 {
@@ -63,12 +65,15 @@ void Motor_Init(void)
     Motor_AllOff();
 }
 
+/* cmd[] is in the kinematic convention; kDirSign maps it to the bridge */
 void Motor_Apply(const short cmd[MOTOR_COUNT])
 {
     unsigned int i;
+    short        phys;
     for (i = 0u; i < MOTOR_COUNT; i++) {
-        if (cmd[i] != s_applied[i]) {
-            write_motor(i, cmd[i]);
+        phys = (kDirSign[i] < 0) ? (short)(-cmd[i]) : cmd[i];
+        if (phys != s_applied[i]) {
+            write_motor(i, phys);
         }
     }
 }

@@ -45,8 +45,13 @@ void Arbiter_Init(Arbiter_t *a)
     a->source = SRC_NONE;
 }
 
-/* Legacy v1.x character map, expressed in actuator space.
-   'I'/'J' keep the coupled wrist motion (motor 4 opposite to motor 5). */
+/* Legacy v1.x character map. The table below is the PHYSICAL motion of
+   v1.x (same as the paper version); it is multiplied by kDirSign so the
+   hand held moves the robot exactly as before after motor.c applies the
+   kinematic sign convention. 'I'/'J' keep the coupled wrist motion
+   (motor 4 physically opposite to motor 5). */
+static const signed char kDirSign[MOTOR_COUNT] = MOTOR_DIR_SIGN_INIT;
+
 void Arbiter_OnHandheldChar(Arbiter_t *a, unsigned char c)
 {
     const short s = HANDHELD_SPEED_CMD;
@@ -72,7 +77,7 @@ void Arbiter_OnHandheldChar(Arbiter_t *a, unsigned char c)
     {
         unsigned int i;
         for (i = 0u; i < MOTOR_COUNT; i++) {
-            a->hh_cmd[i] = cmd[i];
+            a->hh_cmd[i] = (kDirSign[i] < 0) ? (short)(-cmd[i]) : cmd[i];
         }
     }
     a->hh_pulse_ms = HANDHELD_PULSE_MS;     /* re-trigger = continuous jog */

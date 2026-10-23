@@ -4,6 +4,10 @@
 *              and the PC (Simulink), plus the PC communication watchdog.
 *              Pure logic, no HAL dependency. ISO C90.
 *
+*  Outputs are in the KINEMATIC sign convention (see app_config.h).
+*  PC commands arrive already in that convention; hand held characters
+*  are converted so their physical motion is identical to v1.x.
+*
 *  Priority rules
 *   1. Hand held has priority. Any valid character ('A'..'L') takes control
 *      for HANDHELD_OVERRIDE_MS; the motor runs for HANDHELD_PULSE_MS per

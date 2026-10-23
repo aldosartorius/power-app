@@ -4,6 +4,9 @@
 *              cmd > 0 : IN1=1 IN2=0 (forward)   duty = cmd/10000
 *              cmd < 0 : IN1=0 IN2=1 (backward)  duty = -cmd/10000
 *              cmd = 0 : IN1=0 IN2=0 (coast), duty 0 - same as v1.x stop
+*              (physical bridge signals). Motor_Apply() takes commands in
+*              the KINEMATIC convention and applies MOTOR_DIR_SIGN_INIT
+*              (app_config.h) before the bridge.
 *****************************************************************************/
 #ifndef MOTOR_H
 #define MOTOR_H

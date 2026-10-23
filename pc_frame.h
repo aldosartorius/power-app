@@ -14,7 +14,8 @@
 *  [13]   0x55              -           end
 *
 *  Total 14 bytes (1.22 ms at 115200 bps, 8N1).
-*  Command scale: -10000..+10000. Sign = direction (+ = IN1 high, forward),
+*  Command scale: -10000..+10000. Sign = direction in the KINEMATIC
+*  convention (+ = positive joint angle; see MOTOR_DIR_SIGN_INIT),
 *  |value|/10000 = duty cycle 0.0..1.0. Out-of-range values are saturated.
 *****************************************************************************/
 #ifndef PC_FRAME_H
